@@ -83,6 +83,17 @@ Refer to the class code for a full list of available methods and their descripti
 ```php
 // Example code demonstrating how to use the mysqli_rc class
 // ...
+include('config.php');
+include('class.mysqli.php');
+$db->open();
+$db->insert("INSERT INTO `table_name` SET
+            `field_name` = '" . $db->basic_filter($field_value) . "',
+            `field_name` = '" . $db->full_filter($field_value) . "',
+            `field_name` = '" . $db->full_filter($field_value) . "',
+            `field_name` = '" . $db->full_filter($field_value) . "',
+            `field_name` = '" . $db->full_filter($field_value) . "',
+            `field_name` = '" . $db->full_filter($field_value) . "'
+            ");
 ```
 
 ## License
@@ -92,4 +103,5 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## Donate link
+
 https://www.buymeacoffee.com/rabbitcreators
